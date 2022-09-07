@@ -1,0 +1,239 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Completa",
+            "descripcion": "Pan, Carne, Jamon, Queso, Huevo, Lechuga y tomate",
+            "precio": 500,
+            "stock": 50,
+            "img": "./img/platillo1.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 2,
+            "nombre": "Completa + Papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 550,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 3,
+            "nombre": "Americana",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 550,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 4,
+            "nombre": "Americana + Papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 550,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 5,
+            "nombre": "Americana Doble",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 550,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 6,
+            "nombre": "Americana Doble + Papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 550,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 9,
+            "nombre": "Monster",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 10,
+            "nombre": "Monster + Papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 11,
+            "nombre": "De la casa",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 12,
+            "nombre": "De la casa + papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 13,
+            "nombre": "Bacon Cheese",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 14,
+            "nombre": "Bacon Cheese + papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        
+        {
+            "id": 15,
+            "nombre": "Onion",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 600,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 16,
+            "nombre": "Onion + papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 600,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 17,
+            "nombre": "Cheese",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 18,
+            "nombre": "Cheese + papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 19,
+            "nombre": "Ricky Fort",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 20,
+            "nombre": "Ricky Fort + papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 21,
+            "nombre": "Extra Cheddar",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 22,
+            "nombre": "Extra Cheddar + papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 23,
+            "nombre": "Shake",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 1
+        },
+        {
+            "id": 24,
+            "nombre": "Shake + papas",
+            "descripcion": "Pan, Carne, Cheddar, Huevo, cebolla y panceta",
+            "precio": 650,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 2
+        },
+        {
+            "id": 25,
+            "nombre": "Papas Comunes",
+            "descripcion": "Porcion grande de papas",
+            "precio": 300,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 3
+        },
+        {
+            "id": 26,
+            "nombre": "Papas Gratinadas",
+            "descripcion": "Porcion grande de papas gratinadas con muzzarella y oregano",
+            "precio": 450,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 3
+        },
+        {
+            "id": 27,
+            "nombre": "Papas Boom",
+            "descripcion": "Porcion grande de papas gratinadas con muzzarella, jamon y huevo",
+            "precio": 450,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 3
+        },
+        {
+            "id": 28,
+            "nombre": "Papas con Cheddar",
+            "descripcion": "Porcion grande de papas con cheddar y bacon",
+            "precio": 450,
+            "stock": 50,
+            "img": "./img/platillo2.jpg",
+            "destacado": 3
+        }
+    ]
+}

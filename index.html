@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+         <!-- Sweet Alert 2 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.min.css" integrity="sha512-CJ5goVzT/8VLx0FE2KJwDxA7C6gVMkIGKDx31a84D7P4V3lOVJlGUhC2mEqmMHOFotYv4O0nqAOD0sEzsaLMBg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+         <!-- Bootstrap 5.2.0 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+         <!-- Toastify -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> 
+
+        <!-- Template Stylesheet -->
+        <link rel="stylesheet" href="./css/animacion.css">
+        <link href="css/style1.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <section class="loadPage" id="loadPage">
+            <ul class="listlp" id="loadPage">
+                <li><img src="./img/icon.jpeg" class="logolp" id="loadPage"></li>
+                <li id="imgLoadPagePreloader"></li>
+            </ul>
+        </section> 
+
+        <header style="z-index: 1000 !important;" id="#">
+            <ul class="navBarContainerList">
+                <li class="navBarItem">
+                    <a href="#inicio">Inicio</a>
+                </li>
+                <li class="navBarItem">
+                    <a href="#contacto">Ubicacion</a>
+                </li>
+                <li class="navBarItem">
+                   <form class="spacebar" action="">
+                        <img href="" type="img" class="imgLogo" src="./img/icon.jpeg">
+                   </form>
+                </li>
+                <li class="navBarItem">
+                    <a href="#contacto">Telefono</a>
+                </li>
+                <li class="navBarItem">
+                    <a href="#menu">Menu</a>
+                </li>
+            </ul>
+
+        </header>
+ 
+
+        <!-- Page Header Start -->
+        <div class="page-header mb-0" id="inicio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Bienvenido</h2>
+                    </div>
+                    <div class="col-12">
+                        <h4>The Best Burger</h4>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- Page Header End -->
+        
+
+        <!-- Menu Start -->
+        <div class="menu" id="menu">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Nuestro Menu</h2>
+                    <p>Agrega tus productos al carrito</p>
+                </div>
+                <div class="menu-tab">
+                    <ul class="nav nav-pills justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="pill" href="#burgers">Burgers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#snacks">Burger+Papa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#beverages">Papas</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="burgers" class="container tab-pane active">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12">
+                                    <div id="productos">
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 d-none d-lg-block">
+                                    <img src="img/platillo1.jpg" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="snacks" class="container tab-pane fade">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12">
+                                    <div id="hamburPapas">
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 d-none d-lg-block">
+                                    <img src="img/platillo2.jpg" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="beverages" class="container tab-pane fade">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12">
+                                    <div id="papas">
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 d-none d-lg-block">
+                                    <img src="img/papa-comunes.jpg" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+         <!-- -_-_-_-_-_-_- Botón flotante de mi pedido -_-_-_-_-_-_- -->
+         <button class="buttonFloatingOrderZero" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <label class="buttonFloatingNumber" id="badgeCarrito">0</label>
+        </button>
+
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Tu pedido</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <table class="table">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Burger</th>
+                            <th>Cant.</th>
+                            <th>Accion</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="idCarrito">
+                     
+                    </tbody>
+                  </table>
+                  <div id="idTotal"></div>
+            </div>
+        </div>  
+
+
+        <!-- Footer Start -->
+        <div class="footer" id="contacto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-contact">
+                                    <h2>Nuestra Direccion</h2>
+                                    <p><i class="fa fa-map-marker-alt"></i>Corrientes 1035, Formosa Capital</p>
+                                    <p><i class="fa fa-phone-alt"></i>3704-416795</p>
+                                    <p><i class="fa fa-envelope"></i>boomburger@gmail.com</p>
+                                    <div class="footer-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="footer-newsletter">
+                            <h2>Informacion</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>Copyright &copy; <a href="#">Rodrigo Zanin</a>, Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.js" integrity="sha512-MnKz2SbnWiXJ/e0lSfSzjaz9JjJXQNb2iykcZkEY2WOzgJIWVqJBFIIPidlCjak0iTH2bt2u1fHQ4pvKvBYy6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+ 
+         <!-- Sweet alert 2 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.min.js" integrity="sha512-Kyb4n9EVHqUml4QZsvtNk6NDNGO3+Ta1757DSJqpxe7uJlHX1dgpQ6Sk77OGoYA4zl7QXcOK1AlWf8P61lSLfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+        
+        <script src="./js/gestionProductos.js"></script>
+        <script src="./js/Producto.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
