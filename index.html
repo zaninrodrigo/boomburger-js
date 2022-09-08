@@ -23,6 +23,11 @@
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="./css/header.css">
+
+        <!-- Preloads -->
+        <link rel="preload" href="./Styles/lp.css" as="styles">
+
          <!-- Toastify -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> 
 
@@ -33,52 +38,68 @@
 
     <body>
 
-        <section class="loadPage" id="loadPage">
+         <!-- <section class="loadPage" id="loadPage">
             <ul class="listlp" id="loadPage">
                 <li><img src="./img/icon.jpeg" class="logolp" id="loadPage"></li>
                 <li id="imgLoadPagePreloader"></li>
             </ul>
-        </section> 
+        </section>  --> 
 
         <header style="z-index: 1000 !important;" id="#">
-            <ul class="navBarContainerList">
-                <li class="navBarItem">
-                    <a href="#inicio">Inicio</a>
-                </li>
-                <li class="navBarItem">
-                    <a href="#contacto">Ubicacion</a>
-                </li>
-                <li class="navBarItem">
-                   <form class="spacebar" action="">
-                        <img href="" type="img" class="imgLogo" src="./img/icon.jpeg">
-                   </form>
-                </li>
-                <li class="navBarItem">
-                    <a href="#contacto">Telefono</a>
-                </li>
-                <li class="navBarItem">
-                    <a href="#menu">Menu</a>
-                </li>
+           <!-- -_-_-_-_- Menú navegación PH -_-_-_-_- -->
+           <ul class="navBarContainerListPH-OFF" >
+            <li class="navBarItemPH-OFF"><a href="#menu">Menú</a></li>
+            <li class="navBarItemPH-OFF"><a href="#dias">Dias</a></li>
+            <li class="navBarItemPH-OFF">
+                <form class="spacebar" action="#body">
+                    <input href="#body" type="image" class="imgLogo" src="./img/ico.jpeg">
+                </form>
+            </li>
+            <li class="navBarItemPH-OFF"><a href="#ubicacion">Ubicacion</a></li><!-- Cambio a valoracion -->
+            <li class="navBarItemPH-OFF"><a href="#contacto">Contacto</a></li>
+        </ul>     
+
+    <!-- -_-_-_-_- Menú navegación emergente de Más PH -_-_-_-_- -->
+        <ul class="navBarEmergentMorePH-OFF" id="navBarEmergentMorePH">
+            <li class="navBarEmergentItemMorePH-OFF"  style="display: none"><a href="#menu" > Menu </a></li>
+            <hr class="navBarEmergentMoreDivisoryLine">
+            <li class="navBarEmergentItemMorePH-OFF"><a href="#ubicacion"> Ubicación </a></li>
+            <hr class="navBarEmergentMoreDivisoryLine">
+            <li class="navBarEmergentItemMorePH-OFF"><a href="#contacto"> Contacto  </a></li>
+        </ul>
+
+    <!-- -_-_-_-_- Menú navegación PC -_-_-_-_- -->
+        <form class="navBarLogoContainerPC" action="#body">
+            <input type="image" href="#body" class="navBarLogoNonScrollPC" src="./img/ico.jpeg">
+        </form>
+
+        <nav class="navBarContainerPC"> <!-- class: nav-Container -->
+            <ul class="navBarContainerListPC"> <!-- class: Navbar -->
+                <li class="navBarItemPC" style="display: none"><a id="historia" class="historiaLeave">Historia</a></li><!-- href="#history" -->
+                <li class="navBarItemPC"><a href="#menu">Menú</a></li>
+                <li class="navBarItemPC"><a href="#reviews">Críticas</a></li>
+                <li class="navBarItemPC"  style="display: none"><a href="#gallery">Galería</a></li>
+                <li class="navBarItemPC"><a href="#location">Ubicación</a></li><!-- Cambio a valoracion -->
+                <li class="navBarItemPC"><a href="#contact">Contacto</a></li>
             </ul>
+        </nav>
 
         </header>
- 
-
-        <!-- Page Header Start -->
-        <div class="page-header mb-0" id="inicio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Bienvenido</h2>
-                    </div>
-                    <div class="col-12">
-                        <h4>The Best Burger</h4>
-                    </div>
-                </div>
-            </div>
-        </div> 
-        <!-- Page Header End -->
         
+        <main class="main">
+            <section class="section1"> 
+                <div class="imgMainA"></div>
+                    <div class="contImgMainB">
+                        <div class="divImgMainB">
+                                
+                                <div class="imgMainB"></div>
+                                
+                        </div>
+                    </div>
+                <div class="imgMainC"></div>
+            </section>
+        </main>
+
 
         <!-- Menu Start -->
         <div class="menu" id="menu">
@@ -93,7 +114,7 @@
                             <a class="nav-link active" data-toggle="pill" href="#burgers">Burgers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#snacks">Burger+Papa</a>
+                            <a class="nav-link" data-toggle="pill" href="#burgerpapas">Burger + Papa</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="pill" href="#beverages">Papas</a>
@@ -106,13 +127,13 @@
                                     <div id="productos">
 
                                     </div>
-                                </div>
+                                </div>                               
                                 <div class="col-lg-5 d-none d-lg-block">
                                     <img src="img/platillo1.jpg" alt="Image">
-                                </div>
+                                </div>            
                             </div>
                         </div>
-                        <div id="snacks" class="container tab-pane fade">
+                        <div id="burgerpapas" class="container tab-pane fade">
                             <div class="row">
                                 <div class="col-lg-7 col-md-12">
                                     <div id="hamburPapas">
@@ -177,9 +198,7 @@
         <div class="footer" id="contacto">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
-                        <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-sm" id="contacto">
                                 <div class="footer-contact">
                                     <h2>Nuestra Direccion</h2>
                                     <p><i class="fa fa-map-marker-alt"></i>Corrientes 1035, Formosa Capital</p>
@@ -192,13 +211,19 @@
                                     </div>
                                 </div>
                             </div>
+                        <div class="col-sm" id="dias">
+                            <div class="footer-newsletter">
+                                <h2>Dias de cocina</h2>
+                                <p>Viernes de 20.30hs a 00hs</p>
+                                <p>Sabados de 20.30hs a 00hs</p>
+                                <p>Domingos de 20.30hs a 00hs</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-5">
+                    <div class="col-sm" id="nosotros">
                         <div class="footer-newsletter">
-                            <h2>Informacion</h2>
+                            <h2>Nosotros</h2>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
+                                Somos amantes de las hamburguesas caseras, donde desarrollamos desde la carne hasta los panes, obteniendo asi un producto fresco y de calidad!
                             </p>
                         </div>
                     </div>

@@ -39,18 +39,18 @@ class gestionProductos{
                     prod.setAttribute("id","row_"+producto.id);
                     
                     prod.innerHTML = `
-                    <div class="menu-item">
-                        <div class="menu-img">
-                            <img src="${producto.img}" alt="Image">
+                    <a href="javascript:addCarrito(${producto.id})" class="input agregar-carrito" data-id="1" style="">
+                        <div class="menu-item">
+                            <div class="menu-text">
+                                <h3>${producto.nombre}</h3>
+                                <p>${producto.descripcion}</p>
+                                <strong>$${producto.precio}</strong>
+                            </div>
+                            <div class="menu-img">
+                                <img src="${producto.img}" alt="Image" style="padding: 5px 0px">
+                            </div>
                         </div>
-                        <div class="menu-text">
-                            <h4><span>${producto.nombre}</span> <strong style="color: #fbaf32;">$${producto.precio}</strong></h4>
-                            <p>${producto.descripcion}</p>
-                           
-                        </div>
-                        <a href="javascript:addCarrito(${producto.id})" class="u-full-width  button input agregar-carrito" data-id="1"><button type="button" class="btn btn-warning">Agregar</button></a>
-                    </div>
-                     `;
+                    </a>`;
                 
                 divProductos.appendChild(prod)
 
@@ -59,18 +59,18 @@ class gestionProductos{
                     prod.setAttribute("id","row_"+producto.id);
 
                     prod.innerHTML = `
-                     <div class="menu-item">
-                        <div class="menu-img">
-                            <img src="${producto.img}" alt="Image">
+                    <a href="javascript:addCarrito(${producto.id})" class="input agregar-carrito" data-id="1" style="">
+                        <div class="menu-item">
+                            <div class="menu-text">
+                                <h3>${producto.nombre}</h3>
+                                <p>${producto.descripcion}</p>
+                                <strong>$${producto.precio}</strong>
+                            </div>
+                            <div class="menu-img">
+                                <img src="${producto.img}" alt="Image" style="padding: 5px 0px">
+                            </div>
                         </div>
-                        <div class="menu-text">
-                            <h4><span>${producto.nombre}</span> <strong style="color: #fbaf32;">$${producto.precio}</strong></h4>
-                            <p>${producto.descripcion}</p>
-                        </div>
-                        <a href="javascript:addCarrito(${producto.id})" class="u-full-width  button input agregar-carrito" data-id="1"><button type="button" class="btn btn-warning">Agregar</button></a>
-                        
-                    </div>
-                    `;
+                    </a>`;
                  
                 divHamPapas.appendChild(prod)
                 }else if(producto.destacado == 3){
@@ -78,17 +78,18 @@ class gestionProductos{
                     prod.setAttribute("id","row_"+producto.id);
                     
                     prod.innerHTML = ` 
-                    <div class="menu-item">
-                        <div class="menu-img">
-                            <img src="${producto.img}" alt="Image">
+                    <a href="javascript:addCarrito(${producto.id})" class="input agregar-carrito" data-id="1" style="">
+                        <div class="menu-item">
+                            <div class="menu-text">
+                                <h3>${producto.nombre}</h3>
+                                <p>${producto.descripcion}</p>
+                                <strong>$${producto.precio}</strong>
+                            </div>
+                            <div class="menu-img">
+                                <img src="${producto.img}" alt="Image" style="padding: 5px 0px">
+                            </div>
                         </div>
-                        <div class="menu-text">
-                            <h4><span>${producto.nombre}</span> <strong style="color: #fbaf32;">$${producto.precio}</strong></h4>
-                            <p>${producto.descripcion}</p>
-                        </div>
-                        <a href="javascript:addCarrito(${producto.id})" class="u-full-width  button input agregar-carrito" data-id="1"><button type="button" class="btn btn-warning">Agregar</button></a>
-                    </div>
-                    `;
+                    </a>`;
                 divPapas.appendChild(prod)
                 } 
             });

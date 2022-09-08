@@ -1,0 +1,974 @@
+/* Cuando la pantalla es mayor a "X" ejecuta el programa */
+
+/* ======================================================== */
+/* ---------------Barra de navegación en PC---------------- */
+/* ======================================================== */
+@media only screen and (min-width: 1086px) {
+        
+        
+    .navBarContainerListPH-OFF{ /* Oculta la vista de ph en pc */
+        display: none;  
+    }
+
+    .navBarEmergentMorePH-OFF{
+        display: none;
+    }
+
+/* ======================================================== */
+/* -------------Navegación de la vista de PC--------------- */
+/* ======================================================== */
+
+    /* Contenedor NAV general de los items de navegacion en vista PC */
+        .navBarContainerPC{  
+            background-color: rgba(0, 0, 0, 0.87);
+            box-shadow: 0px 5px 12px 5px rgba(0, 0, 0, 0.87);
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            height: 100px;
+            top: 0;
+            justify-content: space-around;
+        }
+
+
+
+/* =========Lista contenedora de items de navegacion PC (MODO: Fija)========= */
+
+    /* Lista padre de los items de la barra de navegacion PC */
+        .navBarContainerListPC{
+            list-style: none;
+            left: 0px; 
+            padding-right: 0px;
+            padding-left: 180px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Items hijos contenedores de los elementos de la barra de navegacion PC */        
+            .navBarItemPC{  
+                position: relative;
+                padding-top: 20px;
+                display: flex;
+                justify-content: space-around;
+                margin-right: 20px;
+            }
+
+            /* Texto de los items de la lista */
+                .navBarContainerListPC a{
+                    padding-top: 5px;
+                    font-family: Calibri;
+                    font-size: 30pt !important;
+                    font-weight: 600;
+                    text-shadow: 0px 0px 7px rgb(22, 0, 0) !important;
+
+                }
+
+/* =========Lista contenedora de items de navegacion PC (MODO: Scroll)========= */
+
+    /* Lista padre de los items de la barra de navegacion PC en Scroll */
+        .navBarContainerListPCScroll{         
+            height: 55px;
+            width: 100%;
+
+            border-bottom-left-radius: 300px;
+            border-top-left-radius: 300px;
+
+            display: flex;
+            position: fixed;
+            white-space: pre-line;
+
+            padding-left: 150px;
+            padding-right: 30px;
+
+            z-index: 1000;
+            top:0;
+            left: 0;
+
+            animation-name: navBarScrollAnimationPC;
+            animation-duration: 500ms;
+            animation-fill-mode:both;
+            animation-iteration-count: 1;
+            animation-delay: 200ms;
+
+            background-color: rgb(26, 0, 1);
+        }   
+
+            @keyframes navBarScrollAnimationPC {
+                0%{left: -100%;box-shadow: 5px 4px 15px 15px rgba(0, 0, 0, 0) !important;}
+                100%{left: 0%; box-shadow: 5px 4px 15px 15px rgba(0, 0, 0, 0.575) !important;}
+            }
+
+        /* Items hijos contenedores de los elementos de la barra de navegacion PC en Scroll */        
+            .navBarItemPcScroll{  
+                list-style: none;
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                top: 0;
+                height: 100%;
+                overflow: visible;
+            }
+
+            /* Texto de los items de la lista */
+                .navBarItemPcScroll a{ 
+                    font-size: 25pt !important;
+                    position: relative;
+                    top: -20px; 
+                }
+
+                .navBarItemPcScroll a:hover{
+                    position: relative;
+                    top: -20px !important; 
+                    font-size: 25pt !important;
+                    text-shadow: 3px -2px 4px #1a1919;
+                    padding-top: 3px;
+                    text-decoration: underline;
+                }
+                
+/* ===============Logo de navegacion PC (MODO: Ambos)=============== */
+    
+    /* Form Contenedor del logo en la barra de navegacion */            
+        .navBarLogoContainerPC{
+            display: flex;
+        }
+
+        /* Logo en el top de pantalla cuando no hay scroll */            
+            .navBarLogoNonScrollPC{       
+                display: inline-block;
+                left: 0px;
+                position: absolute;
+                visibility:visible;
+                height: 150px;
+                z-index: 1000;
+                margin: 7px 10px 10px 10px;
+                border-radius: 100%;
+                outline: none;
+                box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.589);
+                background-color: rgba(0, 0, 0, 0.589)
+            }
+
+        /* Logo en el top de pantalla cuando hay scroll */            
+            .navBarLogoScrollPC{  
+                display: inline-block;
+                left: 0px;
+                top: -80px;
+                position: fixed;
+                height: 100px;
+                z-index: 1010;
+
+                margin-left: 0;
+                margin-top: -20px;
+
+                animation-name: navBarLogoAnimationScrollPC;
+                animation-duration: 500ms;
+                animation-fill-mode: both;
+                animation-iteration-count: 1;
+                animation-delay: 0s;
+                box-shadow: 5px 4px 15px 15px rgba(0, 0, 0, 0.459) !important;
+                border-radius: 100%;
+            
+            }
+
+                @keyframes navBarLogoAnimationScrollPC {
+                    from{top: -80px; right: 100%;}
+                    to{top: 0; right: 0%;}
+                }
+
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+
+    .navBarItemPC a{    /* Texto de los items de la listas de ph */
+        text-decoration: none;
+        color: rgb(255, 236, 202);
+        font-size: 35pt;
+        rotate: (0deg);
+        display: flex;
+        margin: 0 auto;
+    }   
+
+
+    .navBarItemPC a:hover{
+        text-shadow: 3px -2px 4px #1a1919;
+        padding-top: 3px;
+        transition:ease-in-out 100ms;
+        transform: scale(1.1,1.1); 
+        border-radius: 12px;            
+        top: -6px;
+        padding-bottom: 10px;       
+        border-width: 5px;
+        text-decoration: underline
+    }
+
+    .navBarItemPC a:focus{
+        transition:ease-in-out 100ms;
+        transform: scale(1.2,1.2) rotate(-2deg); 
+        border-radius: 12px;
+    }
+
+
+}
+
+/* ======================================================== */
+/* ------------Presentacion de imagenes en PC-------------- */
+/* ======================================================== */
+@media only screen and (min-width: 1086px) {
+    :root{
+        --timeAnimationPresentationDuration: 50s; /* duracion en la que se mantiene las fotos */
+        
+        --timeAnimationPresentationDelayA: 20s;
+        --timeAnimationPresentationDelayB: 15s;
+        --timeAnimationPresentationDelayC: 26s;
+
+    }
+
+    .section1{  /* Seccion contenedora de imagenes */
+        width: 100%;
+        height: 680px;/* 510px */
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+
+        z-index: -1;
+    }
+
+/* ======================================================================================= */
+/* ======================================================================================= */
+/* ======================================================================================= */
+
+/* ------------------------ Imagen A ------------------------ */
+
+    .imgMainA{
+        height: 100%;
+        width: 100%;
+
+        animation-name: animImgA;
+        animation-delay: var(--timeAnimationPresentationDelayA);
+        animation-duration:  var(--timeAnimationPresentationDuration);
+        animation-fill-mode: both;
+        animation-iteration-count: infinite; 
+
+        background-size: cover;
+        background-position-x: left;
+        background-position: top;
+        background-repeat: space;
+        background-position: center center;
+        background-attachment: scroll;
+        overflow: hidden;
+
+        z-index: -4;
+    }
+
+        @keyframes animImgA {
+            0%   {background-image:url(../img/platillo1.jpg)}
+            25%  {background-image:url(../img/platillo2.jpg)}
+            50%  {background-image:url(../img/platillo1.jpg)}
+            75%  {background-image:url(../img/platillo2.jpg)}
+            100% {background-image:url(../img/platillo1.jpg)}
+        }
+
+/* ------------------------ Imagen B ------------------------ */
+
+    .contImgMainB{
+        width: 500px;
+        height: 100%; 
+        transform: skewX(5deg);
+        backface-visibility: hidden;
+        overflow: hidden;
+        position: absolute;
+
+        border-width: 0.1px;
+        border-style: dashed;
+        border-color: rgb(255, 230, 184);
+        border-top: 0px;
+        border-bottom: 0px;
+        z-index: -1;
+        box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.534);
+        /* box-shadow: 0px 0px 29px 16px rgb(0 0 0 / 58%); */
+    }
+
+        .divImgMainB{
+            width: 500px;
+            height: 680px;/* 510px */
+            backface-visibility: hidden;
+            position: relative;
+            z-index: -2;
+        }
+
+
+            .imgMainB{
+                backface-visibility: hidden;
+                position: relative;
+                z-index: -2;
+                width: 589px;
+                height: 100%;
+
+                animation-name: animImgB;
+                animation-delay: var(--timeAnimationPresentationDelayB);
+                animation-duration:  calc(var(--timeAnimationPresentationDuration)*1.25);
+                animation-fill-mode: both;
+                animation-iteration-count: infinite; 
+
+                background-size: cover;
+                background-position-x: left;
+                background-position: top;
+                background-repeat: space;
+                background-position: center center;
+                background-attachment: scroll;
+                overflow: hidden;
+
+                position:relative;
+
+                left: -45px;
+
+                transform: skewX(-5deg);
+
+
+                z-index: -1;
+            }
+
+                @keyframes animImgB {
+                    0%   {background-image:url(../img/platillo3.jpg)}
+                    25%  {background-image:url(../img/platillo4.jpg)}
+                    50%  {background-image:url(../img/platillo5.jpg)}
+                    75%  {background-image:url(../img/platillo3.jpg)}
+                    100% {background-image:url(../img/platillo4.jpg)}
+                }
+
+/* ------------------------ Imagen C ------------------------ */
+
+    .imgMainC{
+        height: 100%;
+        width: 100%;
+
+        animation-name: animImgC;
+        animation-delay: var(--timeAnimationPresentationDelayC);
+        animation-duration:  var(--timeAnimationPresentationDuration);
+        animation-fill-mode: both;
+        animation-iteration-count: infinite; 
+
+        background-size: cover;
+        background-position-x: left;
+        background-position: top;
+        background-repeat: space;
+        background-position: center center;
+        background-attachment: scroll;
+        overflow: hidden;
+
+        z-index: -2;
+    }
+
+    .imgMainPaused{
+        animation-play-state: paused;
+    }
+
+    @keyframes animImgC {
+        0%   {background-image:url(../img/platillo1.jpg)}
+        25%  {background-image:url(../img/platillo2.jpg)}
+        50%  {background-image:url(../img/platillo1.jpg)}
+        75%  {background-image:url(../img/platillo2.jpg)}
+        100% {background-image:url(../img/platillo1.jpg)}
+
+    }
+
+
+}
+
+/* VISTA PH */
+/* Cuando la pantalla es menor a "X" ejecuta el programa */
+@media only screen and (max-width: 1085px) {
+    
+    .section1{
+        display: none;
+    }
+
+    .navBarContainerListPC { /* Oculta la vista de pc en ph */
+        display: none;
+    }
+    
+    .divScrollPc {
+        display: none;
+    }
+
+    .navBarLogoContainerPC{
+        display: none;
+    }
+
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+
+    .navBarContainerPC {  /* Contenedor de las listas e imagenes */
+        position: relative;
+        z-index: 0;
+        top: 0;
+        animation-name: background-animation-img;
+        animation-duration: 110s;/* 100s */
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: space;
+        background-position: center center;
+        background-attachment: scroll;
+        height: 500px;
+        width: 100%;
+    }
+
+        @keyframes background-animation-img {
+            0% {
+                background-image: url(../img/platillo1.jpg)
+            }
+            10% {
+                background-image: url(../img/platillo2.jpg);
+            }
+            20% {
+                background-image: url(../img/platillo3.jpg);
+            }
+            30% {
+                background-image: url(../img/platillo4.jpg);
+            }
+            50% {
+                background-image: url(../img/platillo1.jpg);
+            }
+            60% {
+                background-image: url(../img/platillo2.jpg);
+            }
+            70% {
+                background-image: url(../img/platillo3.jpg);
+            }
+            80% {
+                background-image: url(../img/platillo4.jpg);
+            }
+            90% {
+                background-image: url(../img/platillo1.jpg);
+            }
+            100% {
+                background-image: url(../img/platillo2.jpg)
+            }
+        } 
+
+    .navBarAnimationPaused{
+        position: relative;
+        z-index: 0;
+        top: 0;
+        animation-name: background-animation-img;
+        animation-duration: 100s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-play-state: paused;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: space;
+        background-position: center center;
+        background-attachment: scroll;
+        height: 500px;
+        width: 100%;
+        
+    }
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+
+    .navBarContainerListPC {    /* Contenedor de navBarContainerPC, img-logo y listas */
+        width: 100%;
+        height: fit-content;
+    }
+            
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+
+    .spacebar{/* div de espacio entre elementos  */
+        margin: -20px;
+        width: 100%;
+    }
+    /* ----------- top screen ----------- */
+    
+    .navBarContainerListPH-OFF {   /* Lista de vista ph */
+        margin: 0 auto;
+        width: 100%;
+        height: 50px;
+        z-index: 1;
+        display:flex;
+        position:absolute;
+        visibility: visible;
+        top: 0;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        animation-name: scroll-transform-inic;
+        animation-duration: 750ms;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes scroll-transform-inic {
+        0% {background-color: rgb(79, 11, 12);box-shadow: none;}
+        100%{box-shadow: 0px 5px 12px rgb(0, 0, 0);background-color: rgba(0, 0, 0, 0.87);}
+    }
+    
+    /* ----------- scroll screen ----------- */
+    
+    .navBarListScroll { /* Lista de ph cuando hay scroll */
+        position: fixed;    /* Hacemos que el menú se quede fijo */
+        z-index: 80;  /* Le damos el numero de capa para superposicion */
+        top: 0; /* va a aestar pegado a la parte superior */
+        width: 100%;
+        margin: 0px;
+        padding-top: 5px;
+        box-sizing: border-box;
+        padding-bottom: 6px;
+        height: auto;
+        min-height: 40px;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+        animation-name: scroll-transform;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes scroll-transform {
+        from {
+            background-color: none;
+            top: -50px;
+            box-shadow: none;
+        }
+        to {
+            background-color: rgb(32, 0, 0);
+            box-shadow: 0px 5px 12px rgb(0, 0, 0);
+        }
+    }
+    
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+
+    .navBarItemPH-OFF { /* Items de la lista ph */
+        list-style: none;
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .navBarItemPH-OFF:hover {
+        transition: linear 200ms;
+        transform: scale(1.0001, 1.0001) rotate(-0.5deg);
+    }
+    
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+
+    .navBarItemPH-OFF a {   /* Texto de los items de la listas de ph */
+        font-family: Calibri;
+        text-decoration: none;
+        color: rgb(255, 236, 202);
+        font-size: 5vw; /* hasta 600px */
+        text-shadow: 1px -1px #1a1919a6;
+        position: relative;
+        margin: auto auto;
+        justify-content: center;
+        user-select: none;
+    }
+
+    .navBarItemPH-OFF a:hover {
+        text-decoration: underline;
+        text-shadow: 0px 0px 2px #917e5a;
+        border-radius: 12px;
+        rotate: (0deg);
+    }
+    
+    .navBarItemPH-OFF a:focus {
+        transition: linear 200ms;
+        transform: scale(1.1, 1.1) rotate(-2deg);
+        border-radius: 12px;
+    }
+
+    /* Lista padre contenedora del menu emergente de "Más" en Top*/
+        /* Encendido */
+        .emergentListMoreON{
+            list-style: none;
+            position: fixed;
+            z-index: 60;
+            right: 0;
+            top: 50px;
+            padding: 5px;
+            padding-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.87);
+            box-shadow: 0px 5px 12px rgb(0, 0, 0);
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            animation-name: scrollMoreMenuIN-TOP;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+            animation-iteration-count: 1;
+            overflow: hidden;
+            user-select: none;
+        }
+    
+            @keyframes scrollMoreMenuIN-TOP {
+                0% {height: 0px;  opacity: 0%;}
+                100% {height: max-content !important;opacity: 100%;}
+           }
+        
+        /* Apagado */    
+        .navBarEmergentMorePH-OFF{
+            list-style: none;
+            position: absolute;
+            z-index: 60;
+            right: 0;
+            top: 50px;
+            padding: 5px;
+            padding-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.87);
+            box-shadow: 0px 5px 12px rgb(0, 0, 0);
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+
+            animation-name: scrollMoreMenuOUT-TOP;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: 1;
+            overflow: hidden;
+        }
+
+            @keyframes scrollMoreMenuOUT-TOP {
+                0% {height: 0px;  opacity: 0%;}
+                100% {height: max-content !important;opacity: 100%;}
+            }
+
+    /* Lista padre contenedora del menu emergente de "Más" en Scroll*/
+        /* Encendido */
+        .emergentListMoreScrollON{
+            list-style: none;
+            position: fixed;
+            z-index: 60;
+            right: 0;
+            top: 40px;
+            padding: 5px;
+            padding-bottom: 10px;
+            background-color: rgb(32, 0, 0);
+            box-shadow: 0px 0px 15px rgb(0, 0, 0);
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            animation-name: scrollMoreMenuIN-SCROLL;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+    
+            @keyframes scrollMoreMenuIN-SCROLL {
+                from {
+                    background-color: none;
+                    top: -150px;
+                    box-shadow: none;
+                }
+                to {
+                    top: 40px;
+                    background-color: rgb(32, 0, 0);
+                    box-shadow: 0px 5px 12px rgb(0, 0, 0);
+                }
+            }
+
+        /* Apagado */    
+        .emergentListMoreScrollOFF{
+            list-style: none;
+            position: fixed;
+            z-index: 60;
+            right: 0;
+            top: 40px;
+            padding: 5px;
+            padding-bottom: 10px;
+            background-color: rgb(32, 0, 0);
+            box-shadow: 0px 0px 15px rgb(0, 0, 0);
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            animation-name: scrollMoreMenuOUT-SCROLL;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+    
+            @keyframes scrollMoreMenuOUT-SCROLL {
+                from {
+                    top: 40px;
+                    background-color: rgb(32, 0, 0);
+                    box-shadow: 0px 5px 12px rgb(0, 0, 0);
+                }
+                to {
+                    background-color: none;
+                    top: -150px;
+                    box-shadow: none;
+                }
+            }
+
+
+        /* Item de la lista emergente de "Más" */
+            .navBarEmergentItemMorePH-OFF{
+                text-align:center;
+            }
+
+            /* Texto de la lista emergente de "Más" */
+                .navBarEmergentItemMorePH-OFF a{
+                    font-family: Calibri;
+                    text-decoration: none;
+                    color: rgb(255, 236, 202);
+                    font-size: 4vw;
+                    text-shadow: 1px -1px #1a1919a6;
+                    position: relative;
+                }
+
+                .navBarEmergentItemMorePH-OFF a:hover {
+                    text-decoration: underline;
+                    text-shadow: 0px 0px 2px #917e5a;
+                    border-radius: 12px;
+                    rotate: (0deg);
+                }
+                
+                .navBarEmergentItemMorePH-OFF a:focus {
+                    transition: linear 200ms;
+                    transform: scale(1.1, 1.1) rotate(-2deg);
+                    border-radius: 12px;
+                }
+
+        /* Linea divisora de opciones del emergente de "Más" */         
+            .navBarEmergentMoreDivisoryLine{
+                height: 1px;
+                background-color: rgba(255, 249, 234, 0.377);
+                margin: 8px auto;
+                width: 100%;
+                border-width: 0px;
+            }    
+
+
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+    
+    .imgLogo { /* Logo de ph */
+        transition: linear 500ms;
+        transform: scale(0.68, 0.68);
+        height: 110px;
+        max-height: 110px;
+        max-width: 110px;
+        position: relative;
+        top: 5px;
+        left: -23px;
+        right: 0;
+        margin: 0px;
+        outline: none;
+
+    }
+    
+    .imgLogo:hover {
+        transition: linear 1s;
+        transform: scale(1.02, 1.02) rotate(-15deg);
+    }
+    
+    .imgLogo:focus {
+        transition: linear 1s;
+        transform: scale(1, 1) rotate(-12deg);
+    }
+    
+    .imgLogoScroll{
+        transition: linear 500ms;
+        transform: scale(0.8, 0.8);
+        height: 80px;
+        width: 80px;
+        max-height: 45px;
+        max-width: 45px;
+        position: relative;
+        top: 12.5px;        
+        /* left: -17px; */
+        right: 0;
+        margin: 0px;
+        outline: none;
+        justify-content: space-around;
+    }
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+    /* ======================================================================================= */
+}
+
+/* Cuando la pantalla es mayor a "X" ejecuta el programa */
+@media only screen and (min-width: 600px) {
+    .navBarItemPH-OFF a {   /* Texto de los items de la listas de ph */
+        font-family: Calibri;
+        text-decoration: none;
+        color: rgb(255, 236, 202);
+        font-size: 23pt; /* hasta 600px */
+        text-shadow: 1px -1px #1a1919a6;
+        position: relative;
+        margin: auto auto;
+        justify-content: center;
+        user-select: none;
+    }
+
+
+            /* Lista padre contenedora del menu emergente de "Más" en Top*/
+        /* Encendido */
+        .emergentListMoreON{
+            list-style: none;
+            position: fixed;
+            z-index: 60;
+            right: 0;
+            top: 50px;
+            padding: 5px;
+            padding-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.87);
+            box-shadow: 0px 5px 12px rgb(0, 0, 0);
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            animation-name: scrollMoreMenuIN-TOP;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+            animation-iteration-count: 1;
+            overflow: hidden;
+            user-select: none;
+        }
+    
+            @keyframes scrollMoreMenuIN-TOP {
+                0% {height: 0px;  opacity: 0%;}
+                100% {height: max-content !important;opacity: 100%;}
+           }
+        
+        /* Apagado */    
+        .navBarEmergentMorePH-OFF{
+            list-style: none;
+            position: absolute;
+            z-index: 60;
+            right: 0;
+            top: 50px;
+            padding: 5px;
+            padding-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.87);
+            box-shadow: 0px 5px 12px rgb(0, 0, 0);
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+
+            animation-name: scrollMoreMenuOUT-TOP;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: 1;
+            overflow: hidden;
+        }
+
+            @keyframes scrollMoreMenuOUT-TOP {
+                0% {height: 0px;  opacity: 0%;}
+                100% {height: max-content !important;opacity: 100%;}
+            }
+
+    /* Lista padre contenedora del menu emergente de "Más" en Scroll*/
+        /* Encendido */
+        .emergentListMoreScrollON{
+            list-style: none;
+            position: fixed;
+            z-index: 60;
+            right: 0;
+            top: 40px;
+            padding: 5px;
+            padding-bottom: 10px;
+            background-color: rgb(32, 0, 0);
+            box-shadow: 0px 0px 15px rgb(0, 0, 0);
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            animation-name: scrollMoreMenuIN-SCROLL;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+    
+            @keyframes scrollMoreMenuIN-SCROLL {
+                from {
+                    background-color: none;
+                    top: -150px;
+                    box-shadow: none;
+                }
+                to {
+                    top: 40px;
+                    background-color: rgb(32, 0, 0);
+                    box-shadow: 0px 5px 12px rgb(0, 0, 0);
+                }
+            }
+
+        /* Apagado */    
+        .emergentListMoreScrollOFF{
+            list-style: none;
+            position: fixed;
+            z-index: 60;
+            right: 0;
+            top: 40px;
+            padding: 5px;
+            padding-bottom: 10px;
+            background-color: rgb(32, 0, 0);
+            box-shadow: 0px 0px 15px rgb(0, 0, 0);
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            animation-name: scrollMoreMenuOUT-SCROLL;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+    
+            @keyframes scrollMoreMenuOUT-SCROLL {
+                from {
+                    top: 40px;
+                    background-color: rgb(32, 0, 0);
+                    box-shadow: 0px 5px 12px rgb(0, 0, 0);
+                }
+                to {
+                    background-color: none;
+                    top: -150px;
+                    box-shadow: none;
+                }
+            }
+
+
+        /* Item de la lista emergente de "Más" */
+            .navBarEmergentItemMorePH-OFF{
+                text-align:center;
+            }
+
+            /* Texto de la lista emergente de "Más" */
+                .navBarEmergentItemMorePH-OFF a{
+                    font-family: Calibri;
+                    text-decoration: none;
+                    color: rgb(255, 236, 202);
+                    font-size: 1.8em;
+                    text-shadow: 1px -1px #1a1919a6;
+                    position: relative;
+                }
+
+                .navBarEmergentItemMorePH-OFF a:hover {
+                    text-decoration: underline;
+                    text-shadow: 0px 0px 2px #917e5a;
+                    border-radius: 12px;
+                    rotate: (0deg);
+                }
+                
+                .navBarEmergentItemMorePH-OFF a:focus {
+                    transition: linear 200ms;
+                    transform: scale(1.1, 1.1) rotate(-2deg);
+                    border-radius: 12px;
+                }
+
+        /* Linea divisora de opciones del emergente de "Más" */         
+            .navBarEmergentMoreDivisoryLine{
+                height: 1px;
+                background-color: rgba(255, 249, 234, 0.377);
+                margin: 8px auto;
+                width: 100%;
+                border-width: 0px;
+            }    
+}
